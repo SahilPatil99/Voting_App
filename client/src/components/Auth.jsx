@@ -32,18 +32,21 @@ this.props.authUser(authType || 'login',{username,password});
         const {username,password}=this.state;
         return <div>
             <form onSubmit={this.handleSubmit}>
-                <label for="username">username</label>
+                <label htmlFor="username">username</label>
                 <input 
+
                 type="text" 
                 value={username} 
                 name="username" 
+                autoComplete="off"
                 onChange={this.handleChange}/>
 
-                <label for="password">password</label>
+                <label htmlFor="password">password</label>
                 <input 
                 type="password" 
                 value={password} 
                 name="password" 
+                autoComplete="off"
                 onChange={this.handleChange}/>
                 <button type="submit">Submit</button>
             </form>
